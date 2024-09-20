@@ -1,5 +1,9 @@
 <h1>Angular Router Sample</h1>
+<h2 style="padding: 20px;"> {{authService.isAuthenticated()}}</h2>
+<nav> <a class="button" routerLink="/crisis-list" routerLinkActive="activebutton" ariaCurrentWhenActive="page"> Crisis
+        Center </a> | <a class="button" routerLink="/heroes-list" routerLinkActive="activebutton"
+        ariaCurrentWhenActive="page"> Heroes </a></nav>
 
-<nav> <a class="button" routerLink="/crisis-list">Crisis Center</a> | <a class="button"
-    routerLink="/heroes-list">Heroes</a></nav>
+        <button (click)="login()">LogIn</button>
+        <button (click)="logout()">Logout</button>
 <router-outlet />
