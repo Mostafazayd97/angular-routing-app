@@ -1,0 +1,21 @@
+<div *ngIf="hero">
+    <h2>{{ hero.name }} Details</h2>
+    
+    <div class="hero-details">
+      <img [src]="hero.avatar" alt="{{ hero.name }}" class="hero-avatar">
+      
+      <div class="hero-info">
+        <p><strong>ID:</strong> {{ hero.id }}</p>
+        <p><strong>Name:</strong> {{ hero.name }}</p>
+        <p><strong>Power:</strong> {{ hero.power }}</p>
+        <p><strong>Description:</strong> {{ hero.description }}</p>
+      </div>
+    </div>
+  
+    <button (click)="goBack()">Back to List</button>
+  </div>
+  
+  <div *ngIf="!hero">
+    <p>Loading hero details...</p>
+  </div>
+  

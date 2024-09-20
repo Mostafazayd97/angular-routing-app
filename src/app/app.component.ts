@@ -3,8 +3,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CrisisListComponent } from "./components/crisis-list/crisis-list.component";
 import { HeroesListComponent } from "./components/heroes-list/heroes-list.component";
 import { AuthService } from './services/Auth.service';
-import { CanComponentDeactivate } from './guard/auth.guard';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -15,6 +14,8 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent   {
   title = 'angular-router-sample';
+
+
   formHasUnsavedChanges = true
 
   constructor(public authService:AuthService){

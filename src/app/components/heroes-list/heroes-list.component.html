@@ -1,2 +1,27 @@
 <h3>HEROES</h3>
 <p>Get your heroes here</p>
+
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Avatar</th>
+        <th>Name</th>
+        <th>Power</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hero of heroes">
+        <td>{{ hero.id }}</td>
+        <td>
+          <img [src]="hero.avatar" alt="{{ hero.name }}" width="50" style="cursor: pointer;" (click)="toHeroPage(hero.id)">
+        </td>
+        <td>{{ hero.name }}</td>
+        <td>{{ hero.power }}</td>
+        <td>{{ hero.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <router-outlet />

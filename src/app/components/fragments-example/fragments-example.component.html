@@ -1,0 +1,28 @@
+<form [formGroup]="myForm" style="height:150vh" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name">
+      <div *ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched">
+        Name is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email">
+      <div *ngIf="myForm.controls['email'].invalid && myForm.controls['email'].touched">
+        Please enter a valid email.
+      </div>
+    </div>
+  
+    <div>
+      <label for="age">Age:</label>
+      <input id="age" formControlName="age" type="number">
+      <div *ngIf="myForm.controls['age'].invalid && myForm.controls['age'].touched">
+        Age must be between 18 and 65.
+      </div>
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>
+  
